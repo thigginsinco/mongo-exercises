@@ -5,7 +5,7 @@ module.exports = function(mongoose, Checkout, Movie) {
     	(err, movies) => {
         Checkout.distinct('userId', {movieId: {$in: movies}},
                 (err, users) => {    
-                console.log(users.length + " users checked out The Lord of the Rings Trilogy");
+                console.log(users + " users checked out The Lord of the Rings Trilogy");
             });
     });
 };
